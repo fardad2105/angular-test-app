@@ -1,3 +1,7 @@
+# Use App
+For use app, if you want to go login page, you must use http://localhost:4200/main/login link
+and if you want to saw item lists you must use http://localhost:4200/main/home
+and in this app we have define Admin Module, That if you want to go this module, you should login 
 # AngularTestApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.8.
