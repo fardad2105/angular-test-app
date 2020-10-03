@@ -1,0 +1,13 @@
+.arrow-list-item {
+    /* margin: auto;
+    left: 10px;
+    position: relative; */
+    position: relative;
+    bottom: 2px;
+}
+
+.block{
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 50px;
+}

@@ -1,0 +1,16 @@
+<div *ngFor="let item of subCategories">
+  <mat-expansion-panel
+    hideToggle
+    (opened)="panelStateArrow = 'keyboard_arrow_down'"
+    (closed)="panelStateArrow = 'keyboard_arrow_right'"
+  >
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <span class="arrow-list-item"
+          ><mat-icon>{{panelStateArrow}}</mat-icon></span
+        >
+        {{item.title}}
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+  </mat-expansion-panel>
+</div>

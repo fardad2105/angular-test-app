@@ -1,0 +1,74 @@
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <mat-card class="register-card">
+    <mat-card-header>
+      <mat-card-title>
+        Welcome to DoJoin
+      </mat-card-title>
+    </mat-card-header>
+
+    <div>
+      <mat-form-field *ngIf="Code" class="lable" appearance="fill">
+        <mat-label>CountryCode</mat-label>
+        <mat-select (selectionChange)="selected($event)">
+          <mat-option *ngFor="let country of Code.result" [value]="country.id">
+            {{country.phoneCode}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field class="input">
+        <mat-label>Phone number</mat-label>
+        <input
+          [formControl]="loginForm.get('phoneNumber')"
+          [(ngModel)]="form.username"
+          type="tel"
+          matInput
+          placeholder="5555-555-55-5"
+        />
+        <mat-error *ngIf="loginForm.get('phoneNumber').hasError('required')"
+          >Please fill in the mandatory fields</mat-error
+        >
+        <mat-icon matSuffix>phone icon</mat-icon>
+      </mat-form-field>
+    </div>
+    <div class="block-input">
+      <mat-form-field>
+        <mat-label>password*</mat-label>
+        <input
+          [formControl]="loginForm.get('password')"
+          [(ngModel)]="form.password"
+          type="password"
+          matInput
+          placeholder="****"
+        />
+        <mat-error *ngIf="loginForm.get('password').hasError('requires')">
+          Password is required
+        </mat-error>
+        <mat-icon matSuffix>visibility_off</mat-icon>
+      </mat-form-field>
+    </div>
+    <div class="block-input">
+      <mat-checkbox class="example-margin">Remember me!</mat-checkbox>
+      <a href="#" class="frg-psw">Forgot Password?</a>
+    </div>
+    <button mat-button class="signIn" type="submit">Sign In</button>
+    <button mat-flat-button class="flat-btn">
+      Sign in with Email or Account ID
+    </button>
+    <div class="or">OR</div>
+    <div style="text-align: center; margin-top: 10%;">
+      <h4 style="display: inline; padding-right: 25%;">
+        Don't have an account?
+      </h4>
+      <a href="#">Sign Up</a>
+    </div>
+    <div style="text-align: center;">
+      <a class="btn" href="#" style="padding-right: 10px;"
+        ><img src="../../../../../assets/google-play.png"
+      /></a>
+      <a class="btn" href="#" style="padding-left: 10px;"
+        ><img src="../../../../../assets/app-store.png"
+      /></a>
+    </div>
+  </mat-card>
+</form>

@@ -1,0 +1,26 @@
+<!-- <mat-list role="list">
+    <div class="block">
+        <span class="arrow-list-item"><mat-icon>keyboard_arrow_right</mat-icon></span>
+        <mat-list-item role="listitem" style="padding-bottom: 5px;">Item 1</mat-list-item>
+    </div>
+    <mat-divider></mat-divider>
+  </mat-list> -->
+<div style="margin: 20px;">
+    <h4>Select your service category & profession</h4>
+    <mat-accordion *ngFor="let item of categoryData.result">
+        <mat-expansion-panel hideToggle
+          (opened)="panelStateArrow = 'keyboard_arrow_down'"
+          (closed)="panelStateArrow = 'keyboard_arrow_right'"
+        >
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <span class="arrow-list-item"><mat-icon>{{panelStateArrow}}</mat-icon></span>
+              {{item.title}}
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div *ngIf="item.subCategories">
+             <app-subCategories [subCategories] = "item.subCategories"></app-subCategories>
+          </div>
+        </mat-expansion-panel>
+    </mat-accordion>
+</div>

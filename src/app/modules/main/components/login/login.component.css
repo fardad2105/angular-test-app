@@ -1,0 +1,79 @@
+body {
+    color: black;
+}
+.register-card {
+   max-width: 600px;
+   margin: 0 auto;
+   margin-top: 50px;
+}
+.block-input {
+    width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+mat-card {
+    background: beige !important;
+}
+mat-form-field {
+    width: 100%;
+    margin-bottom: 10px;
+}
+mat-card-header {
+    display: block;
+    margin-bottom: 50px;
+}
+mat-card-title {
+    text-align: center;
+}
+.lable {
+    width: 20%;
+    margin-right: 10%;
+}
+.input {
+    width: 70%;
+}
+
+.frg-psw {
+    position: absolute;
+    right: 0;
+    margin-right: 5%;
+}
+
+.signIn {
+    background: #ff0078;
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+    margin-top: 12%;
+    color: white;
+}
+
+.flat-btn {
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+    margin-top: 20px;
+    color: blue;
+}
+
+.or {
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    color:grey;
+    margin-top: 10%;
+  }
+  
+  .or:after,
+  .or:before {
+      content: "";
+      display: block;
+      background: grey;
+      width: 30%;
+      height:1px;
+      margin: 0 10px;
+  }
